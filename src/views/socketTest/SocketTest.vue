@@ -3,9 +3,7 @@
     <div>SocketTest</div>
     <el-button type="primary" @click="btnClick">点击连接</el-button>
     <el-button type="primary" @click="btnClick2">断开连接</el-button>
-    <video src="http://127.0.0.1:8080/rtsp" controls="controls">
-      your browser does not support the video tag
-    </video> 
+    <img src="http://localhost:5000/cam/rtsp" width="1200px" height="800px"/>
   </div>
 </template>
 
@@ -24,6 +22,7 @@ export default {
     },
     btnClick2: function() {
       this.$socket.disconnect() // 断开socket连接
+      this.$router.push({path: '/dashboard'})
       console.log('已断开连接')
     }
   },

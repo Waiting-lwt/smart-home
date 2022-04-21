@@ -4,6 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+// 引入echarts
+import * as echarts from 'echarts'
+Vue.prototype.$echarts = echarts
+// 引入iconfont
+import '@/assets/icon/iconfont.js'
+import IconSvg from '@/components/icon-svg/IconSvg.vue'
+Vue.component('icon-svg', IconSvg)
 // 引入vue-socket.io
 import VueSocketIO from 'vue-socket.io'
 // 引入全局样式

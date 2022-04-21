@@ -50,9 +50,11 @@ export default {
       menuList
     }
   },
+  watch: {
+
+  },
   computed: {
     onRoute() {
-      console.log(this.$route.path)
       return this.$route.path
     }
   },

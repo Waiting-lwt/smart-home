@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header>
+    <el-header class="main-header">
       <div class="logo">智能家居管理系统</div>
     </el-header>
     <el-container>
@@ -8,22 +8,30 @@
         <NavMenu/>
       </el-aside>
       <el-main>
-        <router-view :key="$route.fullpath"></router-view>
+        <el-container class="main-container">
+          <el-header class="breadcrumb-header">
+            <bread-crumb></bread-crumb>
+          </el-header>
+          <el-main class="content-container">
+            <router-view :key="$route.fullpath"></router-view>
+          </el-main>
+        </el-container>
       </el-main>
     </el-container>
   </el-container>
 </template>
 
 <script>
+import BreadCrumb from '@/layout/breadcrumb/BreadCrumb'
 import NavMenu from '@/layout/navMenu/NavMenu'
 export default {
   name: 'Fragment',
-  components: { NavMenu }
+  components: { NavMenu, BreadCrumb }
 }
 </script>
 
 <style scoped>
-.el-header{
+.main-header{
     position: relative;
     box-sizing: border-box;
     width: 100%;
@@ -33,7 +41,12 @@ export default {
     background-color: #242f42;
   }
   
+  .breadcrumb-header {
+    height: 30px !important;
+  }
+
   .el-main {
+    position: relative;
     background-color: #E9EEF3;
     color: #333;
   }
@@ -47,6 +60,14 @@ export default {
     width: 100%;
   }
 
+  .main-container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .content-container {
+    background-color: white;;
+  }
   
   .logo {
     float: left;
