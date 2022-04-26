@@ -2,6 +2,7 @@
   <el-container>
     <el-header class="main-header">
       <div class="logo">智能家居管理系统</div>
+      <el-button class="logout-btn" plain @click="handleLogout">登出</el-button>
     </el-header>
     <el-container>
       <el-aside style="width: 250px" >
@@ -26,7 +27,13 @@ import BreadCrumb from '@/layout/breadcrumb/BreadCrumb'
 import NavMenu from '@/layout/navMenu/NavMenu'
 export default {
   name: 'Fragment',
-  components: { NavMenu, BreadCrumb }
+  components: { NavMenu, BreadCrumb },
+  methods: {
+    handleLogout() {
+      window.localStorage.removeItem("user")
+      this.$router.push('/login')
+    }
+  }
 }
 </script>
 
@@ -73,5 +80,11 @@ export default {
     float: left;
     width: 250px;
     line-height: 70px;
+  }
+
+  .logout-btn {
+    float: right;
+    margin-top: 15px;
+    margin-right: 50px;
   }
 </style>
