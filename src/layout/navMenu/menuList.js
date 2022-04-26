@@ -11,11 +11,6 @@ export default [
     title: '门禁管理',
     subs: [
       {
-        icon: 'el-icon-mouse',
-        index: '/home/entrance-control',
-        title: '门禁控制',
-      },
-      {
         icon: 'el-icon-s-custom',
         index: '/home/entrance-authority',
         title: '门禁权限',
@@ -27,23 +22,23 @@ export default [
       }
     ]
   },
-  {
-    icon: 'el-icon-s-platform',
-    index: '/home/meter',
-    title: '电表控制',
-    subs: [
-      {
-        icon: 'el-icon-menu',
-        index: '/home/meterData',
-        title: '电表参数',
-      },
-      {
-        icon: 'el-icon-menu',
-        index: '/home/socketTest',
-        title: '测试Socket',
-      },
-    ]
-  },
+  // {
+  //   icon: 'el-icon-s-platform',
+  //   index: '/home/meter',
+  //   title: '电表控制',
+  //   subs: [
+  //     {
+  //       icon: 'el-icon-menu',
+  //       index: '/home/meterData',
+  //       title: '电表参数',
+  //     },
+  //     {
+  //       icon: 'el-icon-menu',
+  //       index: '/home/socketTest',
+  //       title: '测试Socket',
+  //     },
+  //   ]
+  // },
   {
     icon: 'el-icon-video-camera',
     index: '/home/monitor',

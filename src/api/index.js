@@ -18,3 +18,23 @@ export const getExtranceUsers = (data) => request({
   url: '/device/extranceUsers',
   method: 'get'
 })
+
+// 远程开门
+export const openDoor = (data) => request({
+  url: '/device/openDoor',
+  method: 'get'
+})
+
+// 调节灯亮度
+export const setLight = (data) => request({
+  url: '/device/setLight',
+  method: 'post',
+  data
+})
+
+// 调节窗帘位置
+export const setCurtain = (data) => request({
+  url: '/device/setCurtain',
+  method: 'post',
+  data
+})

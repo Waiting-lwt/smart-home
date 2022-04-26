@@ -11,7 +11,7 @@
 export default {
   props: {
     deviceType: String,
-    deviceData: String,
+    deviceData: [String, Number],
     deviceMac: String,
     deviceName: String,
     color: String
@@ -38,7 +38,8 @@ export default {
 	.stat {
 		border-top: 1px solid rgba(255, 255, 255, 0.3);
 		font-size: 8px;
-		margin-top: 25px;
+    // margin-top: 25px;
+    margin-top: 10px;
 		padding: 10px 10px 0;
 		text-transform: uppercase;
 	}
@@ -47,10 +48,11 @@ export default {
 		display: inline-block;
 		font-size: 8px;
 		padding: 10px 10px 0;
-		text-transform: uppercase;
+    text-transform: uppercase;
 	}
 
 	.value {
+    margin-top: 10px;
 		font-size: 28px;
 		padding: 0 10px;
 	}

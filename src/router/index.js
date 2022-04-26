@@ -29,14 +29,6 @@ export const routes = [
         }
       },
       {
-        path: 'entrance-control',
-        name: 'entrance-control',
-        component: () => import('@/views/entrance/entranceControl/EntranceControl.vue'),
-        meta: { 
-          title: '门禁控制' 
-        }
-      },
-      {
         path: 'entrance-authority',
         name: 'entrance-authority',
         component: () => import('@/views/entrance/entranceAuthority/EntranceAuthority.vue'),
@@ -52,22 +44,22 @@ export const routes = [
           title: '门禁日志' 
         }
       },
-      {
-        path: 'socketTest',
-        name: 'socketTest',
-        component: () => import('@/views/socketTest/SocketTest.vue'),
-        meta: { 
-          title: '测试Socket' 
-        }
-      },
-      {
-        path: 'meterData',
-        name: 'meterData',
-        component: () => import('@/views/meterData/MeterData.vue'),
-        meta: { 
-          title: '电表参数' 
-        }
-      },
+      // {
+      //   path: 'socketTest',
+      //   name: 'socketTest',
+      //   component: () => import('@/views/socketTest/SocketTest.vue'),
+      //   meta: { 
+      //     title: '测试Socket' 
+      //   }
+      // },
+      // {
+      //   path: 'meterData',
+      //   name: 'meterData',
+      //   component: () => import('@/views/meterData/MeterData.vue'),
+      //   meta: { 
+      //     title: '电表参数' 
+      //   }
+      // },
       {
         path: 'monitor',
         name: 'monitor',
