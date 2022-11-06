@@ -153,6 +153,6 @@ export const currentOption ={
 }
 
 export const powerOption ={
-  series: createSeries(powerData, '{value}W', 0, 250)
+  series: createSeries(powerData, '{value}W', 0, 800)
 }
 // export const voltageOption = {

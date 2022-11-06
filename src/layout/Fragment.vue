@@ -32,6 +32,7 @@ export default {
     handleLogout() {
       window.localStorage.removeItem("user")
       this.$router.push('/login')
+      this.$message.success('注销成功')
     }
   }
 }
