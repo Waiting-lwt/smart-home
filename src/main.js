@@ -27,7 +27,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI)
 Vue.use(new VueSocketIO({
   debug: true,
-  connection: 'http://localhost:5000'
+  connection: 'http://localhost:9099'
 }))
 Vue.config.productionTip = false
 
